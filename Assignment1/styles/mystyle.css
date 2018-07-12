@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #00cccc;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    height: 350px; 
+    background: white;
+    padding: 30px;
+   
+    font-weight:bold;
+    font-style: italic;
+}
+
+article {
+    float: left;
+    padding: 50px;
+    width: 70%;
+    background-color:#cceeff;
+    height: 350px; 
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    background-color:#00cccc;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-size:20px;
+}
+#outputDiv
+{
+    font-size: 25px;
+    float: center;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+
+}
+#des
+{
+    text-align:justify;
+    color:blue;
+    font-family: "Times New Roman", Times, serif;
+    font-size:15px;
+}
+#des1
+{
+    text-align:justify;
+    color:darkred;
+    font-family: "Times New Roman", Times, serif;
+    font-size:20px;
+}
+#ques
+{
+   color:purple;
+   font-family: "Times New Roman", Times, serif;
+   font-size: 30px;
+}
+#inputlabel
+{
+    color:black;
+    font-family: "Times New Roman", Times, serif;
+    font-size:20px;
+}
+button
+{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #00cccc;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+input
+{
+    height:30px;
+}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}

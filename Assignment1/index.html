@@ -1,9 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "LunchCheck">
     <title>Assignment 1</title>
     <script src = "angular.min.js"></script>
-    <script src = "app.js"></script>
+    <script src = "LunchCheck.js"></script>   
+    <link rel="stylesheet" href="styles/mystyle.css">
     <body>
-        <p>Hello</p>
+      <div ng-controller = "LunchCheckController">
+        <header>
+            <p>My Favourite Meal</p>
+        </header>        
+        <section>
+            <nav>
+                <p id = "des">Lunch is an important meal of a day. -Food is what gives you energy. Lunch raises your blood sugar level in the middle of the day,
+                     making you be able to focus for the rest of the afternoon.Especially for kids,
+                      lunch is even more important because this is when they get their vitamins and nutrients for the day.</p>
+                <p id = "des1">At the same time, the lunch should be a limited one.</p>
+                <p id = "ques">Are we having a good lunch??? Let's check here...</p>
+            </nav>
+            <article>
+                <p id ="inputlabel" >Enter the items you planed for lunch</p>
+                <input type = "text" placeholder = "List comma seperated items" ng-model = "item" size="80">
+                <br>
+                <br>
+                <button ng-click = "displayMessage()">Check If Too Much</button>
+                <br><br>
+                <div id = "outputDiv" style="color:{{mycolor}}">
+                {{message}}
+                </div>
+            </article>
+        </section>
+        <footer>
+            <p>"A Balanced Diet is a Cookie in each hand"</p>
+        </footer>
+    </div>        
     </body>
 </html>
